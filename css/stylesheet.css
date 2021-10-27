@@ -104,70 +104,6 @@ margin-top: .2rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
-  @media screen and (max-width: 1200px) {
-    .recipemargin {
-      margin: auto 0;
-    }
-  }
-
-  @media screen and (max-width: 660px) {
-    picture>img{
-      width: 500px;
-    }
-    h1 {
-      font-size: 1.3rem;
-    }
-    h2 {
-      font-size: 1rem;
-    }
-    .logo>img {
-      width: 200px;
-    }
-    .hamburger>img, .search>img{
-      width:20px;
-    }
-    .hamburger {
-      margin-right: 1rem;
-      margin-left: 2rem;
-    }
-    .search {
-     margin-left: 1rem;
-     margin-right: 2rem;
-   }
-    main {
-      padding-top: 550px;
-  }
-    div.recipes {
-      margin-top: -14px;
-      margin-left: 10px;
-  }
-    .strike {
-      height: 7px;
-      margin: 5rem 2rem 0 ;
-    }
-    div.grid>div>img {
-      width: 200px;
-    }
-    .grid {
-      margin: 2rem 2.5rem 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-    
-    @media screen and (max-width: 500px) {
-      picture>img{
-        width: 350px; 
-       }
-       .nav {
-        background: radial-gradient(90% 420px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
-
-       }
-       main {
-        padding-top: 420px;
-      }
-
-  }
-
   #menuToggle
 {
   display: block;
@@ -311,3 +247,66 @@ margin-top: .2rem;
   transform: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .recipemargin {
+    margin: auto 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  picture>img{
+    width: 500px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .logo>img {
+    width: 200px;
+  }
+  .hamburger>img, .search>img{
+    width:20px;
+  }
+  .hamburger {
+    margin-right: 1rem;
+    margin-left: 2rem;
+  }
+  .search {
+   margin-left: 1rem;
+   margin-right: 2rem;
+ }
+  main {
+    padding-top: 550px;
+}
+  div.recipes {
+    margin-top: -14px;
+    margin-left: 10px;
+}
+  .strike {
+    height: 7px;
+    margin: 5rem 2rem 0 ;
+  }
+  div.grid>div>img {
+    width: 200px;
+  }
+  .grid {
+    margin: 2rem 2.5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+}
+  
+  @media screen and (max-width: 500px) {
+    picture>img{
+      width: 350px; 
+     }
+     .nav {
+      background: radial-gradient(90% 420px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
+
+     }
+     main {
+      padding-top: 420px;
+    }
+
+}
