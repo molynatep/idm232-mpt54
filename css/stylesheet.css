@@ -67,6 +67,10 @@ margin-top: .2rem;
     display: flex;
     padding-top: 700px;
   }
+  
+  .recipemargin {
+    margin: auto 6rem;
+  }
 
   .recipes {
     margin: 0 4rem 0;
@@ -96,11 +100,17 @@ margin-top: .2rem;
   .grid {
     display: grid;
     justify-items: center;
-    margin: 3rem 2rem 3rem;
+    margin: 3rem 2.5rem 3rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1000px) {
+    .recipemargin {
+      margin: auto 0;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
     picture>img{
       width: 500px;
     }
