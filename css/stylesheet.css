@@ -12,8 +12,8 @@ html {
     font-size: 1rem;
     color: #152545;
     background-color: #FCFDFF;
-    ;
   }
+
 
   .nav {
     position: absolute;
@@ -286,7 +286,7 @@ margin-top: .2rem;
   padding: 50px;
   padding-top: 125px;
   
-  background: #ededed;
+  background: #FFF8E8;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
