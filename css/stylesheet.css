@@ -40,3 +40,17 @@ html {
     float: right;
     margin: 2rem 3rem 0;
   }
+
+  h1 {
+    letter-spacing: 0.08em;
+    padding-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  h2 {
+font-style: normal;
+font-weight: 500;
+font-size: 1.5rem;
+letter-spacing: 0.05em;
+margin-top: .2rem;
+  }
