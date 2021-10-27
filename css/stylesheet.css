@@ -23,6 +23,7 @@ html {
   }
 
   .nav {
+    display:block;
     text-align: center;
   }
 
@@ -44,7 +45,7 @@ html {
   h1 {
     letter-spacing: 0.08em;
     padding-top: 3rem;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   h2 {
@@ -53,4 +54,50 @@ font-weight: 500;
 font-size: 1.5rem;
 letter-spacing: 0.05em;
 margin-top: .2rem;
+  }
+
+  .ramen {
+    margin-top: -1.5rem;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 600px) {
+    picture>img{
+      width: 500px;
+    }
+    h1 {
+      font-size: 1.3rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    .logo>img {
+      width: 200px;
+    }
+    .hamburger>img, .search>img{
+      width:20px;
+    }
+    .hamburger {
+      margin-right: 1rem;
+      margin-left: 2rem;
+    }
+    .search {
+     margin-left: 1rem;
+     margin-right: 2rem;
+   }
+  }
+    
+    @media screen and (max-width: 500px) {
+      picture>img{
+        width: 350px; 
+       }
+       .nav {
+        background: radial-gradient(90% 420px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
+
+       }
+  }
+
+  main {
+    display: flex;
+    padding-top: 600px;
   }
