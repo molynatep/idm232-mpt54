@@ -11,7 +11,8 @@ html {
     font-family: 'Poppins',sans-serif;
     font-size: 1rem;
     color: #152545;
-    background-color: #E5E5E5;
+    background-color: #FCFDFF;
+    ;
   }
 
   .nav {
@@ -61,6 +62,37 @@ margin-top: .2rem;
     font-weight: 600;
   }
 
+
+  main {
+    display: flex;
+    padding-top: 700px;
+  }
+
+  .recipes {
+    margin: 0 4rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  div.recipes>h1 {
+    padding: 0;
+  }
+
+  div.recipes {
+    margin-top: -22px;
+    margin-left: 10px;
+  }
+
+  .strike {
+    position: relative;
+    background-color: #FFE6A5;
+    height: 10px;
+    width: 100vw;
+    margin: 5rem 3.5rem 0 ;
+
+  }
+
   @media screen and (max-width: 600px) {
     picture>img{
       width: 500px;
@@ -85,6 +117,17 @@ margin-top: .2rem;
      margin-left: 1rem;
      margin-right: 2rem;
    }
+    main {
+      padding-top: 550px;
+  }
+    div.recipes {
+      margin-top: -14px;
+      margin-left: 10px;
+  }
+    .strike {
+      height: 7px;
+      margin: 5rem 2rem 0 ;
+    }
   }
     
     @media screen and (max-width: 500px) {
@@ -95,9 +138,8 @@ margin-top: .2rem;
         background: radial-gradient(90% 420px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
 
        }
+       main {
+        padding-top: 420px;
+    }
   }
 
-  main {
-    display: flex;
-    padding-top: 600px;
-  }
