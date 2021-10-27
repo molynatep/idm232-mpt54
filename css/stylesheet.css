@@ -89,8 +89,15 @@ margin-top: .2rem;
     background-color: #FFE6A5;
     height: 10px;
     width: 100vw;
-    margin: 5rem 3.5rem 0 ;
+    margin: 5rem 5rem 0 ;
 
+  }
+
+  .grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 4rem 0;
   }
 
   @media screen and (max-width: 600px) {
