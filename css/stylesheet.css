@@ -1,326 +1,352 @@
+
 html {
-   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
-   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  box-sizing: border-box;
+}
+
+ /*css reset and font stuff*/
+ body {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-family: 'Poppins',sans-serif;
+   font-size: 1rem;
+   color: #152545;
+   background-color: #FCFDFF;
  }
 
-  /*css reset and font stuff*/
-  body {
-    margin: 0;
-    padding: 0;
-    border: 0;
     font-family: 'Poppins',sans-serif;
-    font-size: 1rem;
-    color: #152545;
-    background-color: #FCFDFF;
-  }
+ /*NAVIGATION BAR*/
 
-  /*NAVIGATION BAR*/
+ nav {
+   background: #FFE6A5;
+   padding: 1.5rem 0 1.5rem;
+ }
+ 
+ .logo {
+   display: flex;
+   justify-content: center;
+ }
 
-  nav {
-    background: #FFE6A5;
-    padding: 1.5rem 0 1.5rem;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: center;
-  }
+ .hamburger {
+   float: left;
+   margin: 2rem 3rem 0;
+ }
 
-  .hamburger {
-    float: left;
-    margin: 2rem 3rem 0;
-  }
+ .search {
+   float: right;
+   clear: right;
+   margin: .5rem 3rem 0;
+ }
 
-  .search {
-    float: right;
-    clear: right;
-    margin: .5rem 3rem 0;
-  }
+ .hero {
+   text-align: center;
+ }
+ .center {
+   display: flex;
+   justify-content: center;
+   height: 500px;
+   background: radial-gradient(90% 500px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
 
-  .hero {
-    text-align: center;
-  }
-  .center {
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    background: radial-gradient(90% 500px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
+ }
 
-  }
+ /*fonts*/
 
-  /*fonts*/
+ h1 {
+   letter-spacing: 0.08em;
+   padding-top: 3rem;
+   margin: 0;
+   font-size: 1.8rem;
+ }
 
-  h1 {
-    letter-spacing: 0.08em;
-    padding-top: 3rem;
-    margin: 0;
-    font-size: 1.8rem;
-  }
+ h2 {
+ font-style: normal;
+ font-weight: 500;
+ font-size: 1.5rem;
+ letter-spacing: 0.05em;
+ margin-top: .2rem;
+ }
 
-  h2 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: 0.05em;
-  margin-top: .2rem;
-  }
+ .ramen {
+   margin-top: -1.5rem;
+   font-weight: 600;
+ }
+ 
+ .recipes {
+   position: absolute;
+   top: 0;
+   left: 0;
+ }
 
-  .ramen {
-    margin-top: -1.5rem;
-    font-weight: 600;
-  }
-  
-  .recipes {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+ div.recipes>h1 {
+   padding: 0;
+ }
 
-  div.recipes>h1 {
-    padding: 0;
-  }
+ div.recipes {
+   margin-top: -19px;
+   margin-left: 10px;
+ }
 
-  div.recipes {
-    margin-top: -19px;
-    margin-left: 10px;
-  }
+ .strike {
+   position: relative;
+   background-color: #FFE6A5;
+   height: 10px;
+   margin: 4rem 4rem 0;
+ }
 
-  .strike {
-    position: relative;
-    background-color: #FFE6A5;
-    height: 10px;
-    margin: 4rem 4rem 0;
-  }
+ .featuredrecipes {
+   padding-top: 6rem;
+   margin: auto 6rem;
+ }
 
-  .featuredrecipes {
-    padding-top: 6rem;
-    margin: auto 6rem;
-  }
+ .grid, .grid2 {
+   display: grid;
+   justify-items: center;
+   margin-top: 3rem;
+ }
 
-  .grid, .grid2 {
-    display: grid;
-    justify-items: center;
-    margin-top: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
+ .grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ }
 
-  /*HAMBURGER*/
+ .grid2 {
+   margin-top: -20rem;
+   padding: 0 10rem 0;
+   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+ }
+ div.grid2>div>img {
+   width:120px;
+ }
 
-  #menuToggle
+ /*HAMBURGER*/
+
+ #menuToggle
 {
-  display: block;
-  position: relative;
-  float: left;
-  clear: left;
-  margin: .5rem 2rem 2rem 2rem;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+ display: block;
+ position: relative;
+ float: left;
+ clear: left;
+ margin: .5rem 2rem 2rem 2rem;
+ 
+ z-index: 1;
+ 
+ -webkit-user-select: none;
+ user-select: none;
 }
 
 #menuToggle a
 {
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
+ text-decoration: none;
+ color: #232323;
+ 
+ transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-  color: tomato;
+ color: tomato;
 }
 
 
 #menuToggle input
 {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
+ display: block;
+ width: 40px;
+ height: 32px;
+ position: absolute;
+ top: -7px;
+ left: -5px;
+ 
+ cursor: pointer;
+ 
+ opacity: 0; /* hide this */
+ z-index: 2; /* and place it over the hamburger */
+ 
+ -webkit-touch-callout: none;
 }
 
 /*
- * Just a quick hamburger
- */
+* Just a quick hamburger
+*/
 #menuToggle span
 {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #152545;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+ display: block;
+ width: 33px;
+ height: 4px;
+ margin-bottom: 5px;
+ position: relative;
+ 
+ background: #152545;
+ border-radius: 3px;
+ 
+ z-index: 1;
+ 
+ transform-origin: 4px 0px;
+ 
+ transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+             background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+             opacity 0.55s ease;
 }
 
 #menuToggle span:first-child
 {
-  transform-origin: 0% 0%;
+ transform-origin: 0% 0%;
 }
 
 #menuToggle span:nth-last-child(2)
 {
-  transform-origin: 0% 100%;
+ transform-origin: 0% 100%;
 }
 
 /* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
 #menuToggle input:checked ~ span
 {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+ opacity: 1;
+ transform: rotate(45deg) translate(-2px, -1px);
+ background: #232323;
 }
 
 /*
- * But let's hide the middle one.
- */
+* But let's hide the middle one.
+*/
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+ opacity: 0;
+ transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 /*
- * Ohyeah and the last one should go the other direction
- */
+* Ohyeah and the last one should go the other direction
+*/
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(0, -1px);
+ transform: rotate(-45deg) translate(0, -1px);
 }
 
 /*
- * Make this absolute positioned
- * at the top left of the screen
- */
+* Make this absolute positioned
+* at the top left of the screen
+*/
 #menu
 {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #FFF8E8;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ position: absolute;
+ width: 300px;
+ margin: -100px 0 0 -50px;
+ padding: 50px;
+ padding-top: 125px;
+ 
+ background: #FFF8E8;
+ list-style-type: none;
+ -webkit-font-smoothing: antialiased;
+ /* to stop flickering of text in safari */
+ 
+ transform-origin: 0% 0%;
+ transform: translate(-100%, 0);
+ 
+ transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
 {
-  padding: 10px 0;
-  font-size: 22px;
+ padding: 10px 0;
+ font-size: 22px;
 }
 
 /*
- * And let's slide it in from the left
- */
+* And let's slide it in from the left
+*/
 #menuToggle input:checked ~ ul
 {
-  transform: none;
+ transform: none;
 }
 
 
 @media screen and (max-width: 810px) {
-  picture>img{
-    width: 500px;
-  }
-  h1 {
-    font-size: 1.3rem;
-  }
-  h2 {
-    font-size: 1rem;
-  }
-  .logo>img {
-    width: 200px;
-  }
-   .search>img{
-    width:20px;
-  }
-  .search {
-   margin-left: 1rem;
-   margin-right: 2rem;
+ picture>img{
+   width: 500px;
  }
-  div.recipes {
-    margin-top: -14px;
-    margin-left: 10px;
+ h1 {
+   font-size: 1.3rem;
+ }
+ h2 {
+   font-size: 1rem;
+ }
+ .logo>img {
+   width: 200px;
+ }
+  .search>img{
+   width:20px;
+ }
+ .search {
+  margin-left: 1rem;
+  margin-right: 2rem;
 }
-  .strike {
-    height: 7px;
-    margin: 5rem 2rem 0 ;
-  }
-  div.grid>div>img {
-    width: 200px;
-  }
-  .grid {
-    margin: 2rem 0;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ div.recipes {
+   margin-top: -14px;
+   margin-left: 10px;
+}
+ .strike {
+   height: 7px;
+   margin: 5rem 2rem 0 ;
+ }
+ div.grid>div>img {
+   width: 200px;
+ }
+ .grid {
+   margin: 2rem 0;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
-  }
-  .grid2>div>img {
-    width:120px;
-  }
-    .grid2 {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
-  }
-  .featuredrecipes {
-    padding-top: 0rem;
-    margin: auto 1rem;
-  }
-  .center {
-    background: radial-gradient(90% 350px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
-    height: 450px;
-  }
-  #menuToggle span
+ }
+ .grid2>div>img {
+   width:120px;
+ }
+   .grid2 {
+     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
+ }
+ .featuredrecipes {
+   padding-top: 0rem;
+   margin: auto 1rem;
+ }
+ .center {
+   background: radial-gradient(90% 350px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
+   height: 450px;
+ }
+ #menuToggle span
 {
-  width: 27px;
-  height: 2px;
-  margin-bottom: 5px;
+ width: 27px;
+ height: 2px;
+ margin-bottom: 5px;
 }
-  
-  @media screen and (max-width: 500px) {
-    picture>img{
-      width: 350px; 
-     }
-     div.grid>div>img {
-      width: 150px;
+div.grid2>div>img {
+  width:100px;
+}
+.grid2 {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 0 4rem 0;
+}
+}
+ 
+ @media screen and (max-width: 500px) {
+   picture>img{
+     width: 350px; 
     }
-    .grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    .grid2>div>img {
-      width:100px;
-    }
-    .center {
-      height: 350px;
-    }
+    div.grid>div>img {
+     width: 150px;
+   }
+   .grid {
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   }
+   .grid2>div>img {
+     width:100px;
+   }
+   .center {
+     height: 350px;
+   }
+   .grid2 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin-top: -14rem;
   }
+ }
