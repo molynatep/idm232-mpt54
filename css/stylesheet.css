@@ -14,29 +14,17 @@ html {
     background-color: #FCFDFF;
   }
 
+  /*NAVIGATION BAR*/
+
   nav {
     background: #FFE6A5;
+    padding: 1.5rem 0 1.5rem;
   }
-
-  .nav, .nav-categories {
-    display:block;
-    text-align: center;
-    position: absolute;
-    width: 100vw;
-    filter: drop-shadow( 0px 8px 10px rgba(78, 118, 131, 0.07));
+  
+  .logo {
+    display: flex;
+    justify-content: center;
   }
-  .nav {
-    height: 500px;
-    background: radial-gradient(90% 500px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
-  }
-  .nav-categories{
-    height: 700px;
-    background: radial-gradient(90% 700px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
-  }
-
-.logo {
-  margin-top: 2rem;
-}
 
   .hamburger {
     float: left;
@@ -49,6 +37,19 @@ html {
     margin: .5rem 3rem 0;
   }
 
+  .hero {
+    text-align: center;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    background: radial-gradient(90% 500px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
+
+  }
+
+  /*fonts*/
+
   h1 {
     letter-spacing: 0.08em;
     padding-top: 3rem;
@@ -57,30 +58,19 @@ html {
   }
 
   h2 {
-font-style: normal;
-font-weight: 500;
-font-size: 1.5rem;
-letter-spacing: 0.05em;
-margin-top: .2rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin-top: .2rem;
   }
 
   .ramen {
     margin-top: -1.5rem;
     font-weight: 600;
   }
-
-
-  main {
-    display: flex;
-    padding-top: 700px;
-  }
   
-  .recipemargin {
-    margin: auto 6rem;
-  }
-
   .recipes {
-    margin: 0 4rem 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -91,7 +81,7 @@ margin-top: .2rem;
   }
 
   div.recipes {
-    margin-top: -22px;
+    margin-top: -19px;
     margin-left: 10px;
   }
 
@@ -99,20 +89,22 @@ margin-top: .2rem;
     position: relative;
     background-color: #FFE6A5;
     height: 10px;
-    width: 100vw;
-    margin: 5rem 5rem 0 ;
+    margin: 4rem 4rem 0;
+  }
 
+  .featuredrecipes {
+    padding-top: 6rem;
+    margin: auto 6rem;
   }
 
   .grid, .grid2 {
     display: grid;
     justify-items: center;
-    margin: 3rem 2.5rem 3rem;
+    margin-top: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .grid2 {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
+
+  /*HAMBURGER*/
 
   #menuToggle
 {
@@ -257,16 +249,8 @@ margin-top: .2rem;
   transform: none;
 }
 
-@media screen and (max-width: 1200px) {
-  .recipemargin {
-    margin: auto 0;
-  }
-  .grid, .grid2 {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 810px) {
   picture>img{
     width: 500px;
   }
@@ -279,20 +263,13 @@ margin-top: .2rem;
   .logo>img {
     width: 200px;
   }
-  .hamburger>img, .search>img{
+   .search>img{
     width:20px;
-  }
-  .hamburger {
-    margin-right: 1rem;
-    margin-left: 2rem;
   }
   .search {
    margin-left: 1rem;
    margin-right: 2rem;
  }
-  main {
-    padding-top: 550px;
-}
   div.recipes {
     margin-top: -14px;
     margin-left: 10px;
@@ -305,30 +282,45 @@ margin-top: .2rem;
     width: 200px;
   }
   .grid {
-    margin: 2rem 2.5rem 2rem;
+    margin: 2rem 0;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
+
+  }
   .grid2>div>img {
     width:120px;
   }
     .grid2 {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
   }
+  .featuredrecipes {
+    padding-top: 0rem;
+    margin: auto 1rem;
+  }
+  .center {
+    background: radial-gradient(90% 350px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
+    height: 450px;
+  }
+  #menuToggle span
+{
+  width: 27px;
+  height: 2px;
+  margin-bottom: 5px;
 }
   
   @media screen and (max-width: 500px) {
     picture>img{
       width: 350px; 
      }
-     .nav {
-      background: radial-gradient(90% 420px at 50% -50px, #FFE6A5 100%, transparent 100%) no-repeat;
-
-     }
-     main {
-      padding-top: 420px;
+     div.grid>div>img {
+      width: 150px;
+    }
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
     .grid2>div>img {
       width:100px;
     }
-
-}
+    .center {
+      height: 350px;
+    }
+  }
