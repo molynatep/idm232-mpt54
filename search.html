@@ -12,55 +12,40 @@
    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-      <header class="nav">
-            <nav role="navigation">
-               <div id="menuToggle">
-                 <!--
-                 A fake / hidden checkbox is used as click reciever,
-                 so you can use the :checked selector on it.
-                 -->
-                 <input type="checkbox" />
-                 
-                 <!--
-                 Some spans to act as a hamburger.
-                 
-                 They are acting like a real hamburger,
-                 not that McDonalds stuff.
-                 -->
-                 <span></span>
-                 <span></span>
-                 <span></span>
-                 
-                 <!--
-                 Too bad the menu has to be inside of the button
-                 but hey, it's pure CSS magic.
-                 -->
-                 <ul id="menu">
-                   <a href="index.html"><li>Home</li></a>
-                   <a href="categories.html"><li>Categories</li></a>
-                   <a href="search.html"><li>Search</li></a>
-                   <a href="#"><li>Admin</li></a>
-                 </ul>
-               </div>
-               <div class="search">
-                  <img src="imgs/search.svg" alt="search">
-               </div>
-               <div class="logo">
-               <img src="imgs/logo.svg" alt="logo">
-               </div>
-             </nav>
+   <nav role="navigation">
+      <div id="menuToggle">
+         <input type="checkbox" />
+         <span></span>
+         <span></span>
+         <span></span>
+         <ul id="menu">
+            <a href="index.html"><li>Home</li></a>
+            <a href="categories.html"><li>Categories</li></a>
+            <a href="search.html"><li>Search</li></a>
+            <a href="edit"><li>Admin</li></a>
+         </ul>
+      </div>
+      <div class="search">
+         <img src="imgs/search.svg" alt="search">
+      </div>
+      <div class="logo">
+         <img src="imgs/logo.svg" alt="logo">
+      </div>
+   </nav>
+   <div class="center">
+      <div class= "hero">
          <h1>Find your favorite recipes.</h1>
          <h2>What will you cook today?</h2>
-      </header> 
+         <input class="searchbar" type="text" placeholder="Search for...">
+   </div>
+   </div>
    <div class= "recipemargin">
-   <main>
       <div class="strike">
          <div class="recipes">
          <h1>Results for 'Asian Dishes'</h1>
          </div>
       </div>
-   </main>   
-   <div class="grid">
+   <div class="grid searchgrid">
       <div>
       <img src="imgs/chicken.png" alt="chicken">
       </div>
@@ -86,5 +71,6 @@
          <img src="imgs/chicken.png" alt="chicken">
          </div>
    </div>
+   <h2 class="view">VIEW ALL</h2>
 </body>
 </html>

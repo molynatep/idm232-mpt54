@@ -49,6 +49,10 @@ html {
 
  }
 
+ .recipehover:hover {
+   opacity: 90%;
+ }
+
  /*fonts*/
 
  h1 {
@@ -115,6 +119,14 @@ html {
  }
  div.grid2>div>img {
    width:120px;
+ }
+
+ .searchbar {
+   font-family: 'Poppins', sans-serif;
+   padding: .5rem 1.5rem;
+   border-radius: 10px;
+   margin-top: 1.5rem;
+   width: 500px;
  }
 
  /*HAMBURGER*/
@@ -291,7 +303,7 @@ html {
    height: 7px;
    margin: 5rem 2rem 0 ;
  }
- div.grid>div>img {
+ div.grid>div>img, img.banana {
    width: 200px;
  }
  .grid {
@@ -326,13 +338,19 @@ div.grid2>div>img {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   padding: 0 4rem 0;
 }
+.recipemargin {
+  margin-top: -10rem;
+}
+.searchbar {
+  width:400px;
+}
 }
  
  @media screen and (max-width: 500px) {
    picture>img{
      width: 350px; 
     }
-    div.grid>div>img {
+    div.grid>div>img, img.banana {
      width: 150px;
    }
    .grid {
@@ -348,4 +366,26 @@ div.grid2>div>img {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     margin-top: -14rem;
   }
+
+  .recipemargin {
+    margin-top: -4rem;
+  }
+  .searchbar {
+    width:300px;
+  }
+ }
+
+ @media screen and (max-width: 420px) {
+   body {
+     background: #FFE6A5;
+   }
+   .searchbar {
+     width: 240px;
+   }
+   h1 {
+     font-size: 1.2rem;
+   }
+   .recipemargin {
+     margin-top: -10rem;
+   }
  }
