@@ -75,6 +75,10 @@ html {
    padding: 1rem 2rem 1rem;
  }
 
+ p{
+   line-height:1.8;
+ }
+
  .ramen {
    margin-top: -1.5rem;
    font-weight: 600;
@@ -132,6 +136,7 @@ html {
    border-radius: 10px;
    margin-top: 1.5rem;
    width: 500px;
+   border-style: hidden;
  }
 
  /*HAMBURGER*/
@@ -283,6 +288,52 @@ html {
   margin: 0 2rem;
 }
 
+.recipemargin {
+  margin-top: -4rem;
+}
+.searchbar {
+  width:600px;
+}
+
+.recipegrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 2rem;
+}
+
+.leftrecipe {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+.rightrecipe {
+  grid-column-start: 7;
+  grid-column-end: 12;
+}
+.ingredients {
+  background:#FFE6A5;
+  padding: 0 3rem 2rem ;
+  border-radius: 10px;
+}
+p.step {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+  div.rightrecipe>img {
+    width:100%;
+  }
+  div.ingredients>h1, div.rightrecipe>h1 {
+    font-size: 1.5rem;
+  }
+  div.rightrecipe>h2 {
+    font-size: 1rem;
+  }
+  div.ingredients>p, div.rightrecipe>p {
+    font-size: .8rem;
+
+}
+}
+
 
 @media screen and (max-width: 810px) {
  picture>img{
@@ -351,10 +402,18 @@ div.grid2>div>img {
   margin: -10rem 1rem 0;
 }
 .searchbar {
-  width:400px;
+  width:380px;
+}
+.leftrecipe {
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+.rightrecipe {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  margin-top: 3rem;
 }
 }
- 
  @media screen and (max-width: 500px) {
    picture>img{
      width: 350px; 
@@ -374,14 +433,20 @@ div.grid2>div>img {
    .grid2 {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     margin-top: -14rem;
+   }
+   .recipemargin {
+     margin-top: -5rem;
+   }
+    .searchbar {
+      width:300px;
+  }
+  div.ingredients>h1, div.rightrecipe>h1 {
+    font-size: 1.2rem;
+  }
+  div.rightrecipe>h2 {
+    font-size: .8rem;
   }
 
-  .recipemargin {
-    margin-top: -4rem;
-  }
-  .searchbar {
-    width:300px;
-  }
  }
 
  @media screen and (max-width: 420px) {
@@ -392,9 +457,16 @@ div.grid2>div>img {
      width: 240px;
    }
    h1 {
-     font-size: 1.2rem;
+     font-size: 1.1rem;
    }
    .recipemargin {
      margin-top: -10rem;
+   }
+  .leftrecipe {
+     margin-top: -4rem;
+   }
+   .ingredients {
+     padding: 0;
+
    }
  }
