@@ -139,6 +139,21 @@ html {
    border-style: hidden;
  }
 
+ .editbox {
+   background-color: #FFE6A5;
+   margin: 2rem 2rem;
+   padding: .8rem 4rem;
+   border-radius: 10px;
+ }
+.recipename, .date, .edit, .delete {
+  display: inline-block;
+}
+.date, .edit, .delete {
+  float: right;
+}
+.date, .edit {
+  margin-right: 4rem;
+}
  /*HAMBURGER*/
 
  #menuToggle
@@ -318,6 +333,50 @@ p.step {
   font-weight: bold;
 }
 
+.add {
+  float: right;
+  margin-right:2rem;
+  margin-top: -.5rem;
+}
+
+.add:hover {
+  color: tomato;
+  text-decoration: underline;
+}
+
+.pickimage {
+  width: 400px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+}
+.recipename, .time, .eachsteps, .ingredientsfood {
+  display: flex;
+  width: 95%;
+  padding: .5rem 0;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-radius: 5px;
+}
+
+.eachsteps, .ingredientsfood {
+  padding-bottom: 6rem;
+}
+
+button, input {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  background-color: #FFE6A5;
+  padding: .3rem .8rem;
+  border-radius: 5px;
+}
+
+
 @media screen and (max-width: 1300px) {
   div.rightrecipe>img {
     width:100%;
@@ -413,6 +472,19 @@ div.grid2>div>img {
   grid-column-end: 13;
   margin-top: 3rem;
 }
+
+.editbox {
+  margin: 1.5rem 2rem;
+  padding: .5rem 2rem;
+  border-radius: 10px;
+  font-size: 75%;
+}
+.date, .edit {
+ margin-right: 2rem;
+}
+.viewall {
+  margin-top: -2rem;
+}
 }
  @media screen and (max-width: 500px) {
    picture>img{
@@ -447,6 +519,35 @@ div.grid2>div>img {
     font-size: .8rem;
   }
 
+  .editbox {
+    margin: 1rem 2rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 70%;
+  }
+  .date, .edit {
+   margin-right: 1rem;
+  }
+  .add {
+    font-size: 80%;
+    margin-top: 0;
+  }
+  
+  .pickimage {
+    width: 100%;
+  }
+  
+  button, input {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  button {
+    background-color: #FFE6A5;
+    padding: .3rem .8rem;
+    border-radius: 5px;
+    margin: 0 2rem;
+  }
+
  }
 
  @media screen and (max-width: 420px) {
@@ -474,5 +575,22 @@ div.grid2>div>img {
    div.recipes {
     margin-top: -10px;
     margin-left: 10px;
+  }
+  .editbox {
+    margin: 1rem 1rem;
+    padding: .3rem 1rem;
+    border-radius: 10px;
+    font-size: 60%;
+    background-color: #FFF8E8
+  }
+  .date, .edit {
+   margin-right: 1rem;
+  }
+  .viewall {
+    margin-top: -3rem;
+  }
+  button {
+    background-color: #FFF8E8;
+    margin-left: 0;
   }
  }
