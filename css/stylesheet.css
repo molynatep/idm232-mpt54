@@ -70,6 +70,11 @@ html {
  margin-top: .2rem;
  }
 
+ h2.view {
+   float: right;
+   padding: 1rem 2rem 1rem;
+ }
+
  .ramen {
    margin-top: -1.5rem;
    font-weight: 600;
@@ -274,6 +279,10 @@ html {
  transform: none;
 }
 
+.recipemargin {
+  margin: 0 2rem;
+}
+
 
 @media screen and (max-width: 810px) {
  picture>img{
@@ -339,7 +348,7 @@ div.grid2>div>img {
   padding: 0 4rem 0;
 }
 .recipemargin {
-  margin-top: -10rem;
+  margin: -10rem 1rem 0;
 }
 .searchbar {
   width:400px;
