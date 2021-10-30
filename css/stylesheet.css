@@ -467,6 +467,12 @@ div.grid2>div>img {
    }
    .ingredients {
      padding: 0;
-
    }
+   div.strike {
+     background-color:#FFF8E8;
+   }
+   div.recipes {
+    margin-top: -10px;
+    margin-left: 10px;
+  }
  }
