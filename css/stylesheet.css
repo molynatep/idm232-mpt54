@@ -2,7 +2,7 @@ html {
    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
    box-sizing: border-box;
  }
- 
+
   /*css reset and font stuff*/
   body {
     margin: 0;
@@ -14,6 +14,9 @@ html {
     background-color: #FCFDFF;
   }
 
+  nav {
+    background: #FFE6A5;
+  }
 
   .nav, .nav-categories {
     display:block;
