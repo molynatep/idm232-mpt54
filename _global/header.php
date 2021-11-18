@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+//Required files for the app 
+
+//require_once $_SERVER['DOCUMENT_ROOT] . '/config.php';
+
+// Set Page Title
+
+if (isset($page_title)) {
+    $page_title = $page_title . 'Happy Recipes';
+} else {
+    $page_title = 'Happy Recipes';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,4 +28,5 @@
    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php //Main content starts here ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/navigation.php';?>
+    
