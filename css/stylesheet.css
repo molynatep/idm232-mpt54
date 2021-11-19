@@ -355,29 +355,36 @@ form {
   justify-content: center;
   padding-top: 4rem;
   margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
 }
-.recipenaming, .time, .eachsteps, .ingredientsfood {
+input {
   display: flex;
-  width: 95%;
-  padding: .5rem 0;
-  margin: 1rem 0;
-  padding-left: 1rem;
   border-radius: 5px;
-}
-
-.eachsteps, .ingredientsfood {
-  padding-bottom: 6rem;
-}
-
-button, input {
   font-family: 'Poppins', sans-serif;
 }
 
-button {
+input[type=submit]{
   background-color: #FFE6A5;
-  padding: .3rem .8rem;
   border-radius: 5px;
+  padding: .2rem 1rem;
 }
+
+input[type=text] {
+  padding: .5rem 0 .5rem .8rem;
+  margin: 1rem 0;
+  width: 95%;
+}
+
+input[type=file] {
+  margin-top: .5rem;
+}
+
+input[type=submit]:hover, input[type=file]:hover {
+  cursor: pointer;
+}
+
+
+
 
 
 @media screen and (max-width: 1300px) {
@@ -541,18 +548,8 @@ div.grid2>div>img {
     width: 100%;
   }
   
-  button, input {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  button {
-    background-color: #FFE6A5;
-    padding: .3rem .8rem;
-    border-radius: 5px;
-    margin: 0 2rem;
-  }
+}
 
- }
 
  @media screen and (max-width: 420px) {
    body {
@@ -593,7 +590,7 @@ div.grid2>div>img {
   .viewall {
     margin-top: -3rem;
   }
-  button {
+  input[type=submit] {
     background-color: #FFF8E8;
     margin-left: 0;
   }
