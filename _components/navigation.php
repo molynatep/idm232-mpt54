@@ -7,10 +7,10 @@
          <span></span>
          <span></span>
          <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li><a href="edit.html">Admin</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="categories.php">Categories</a></li>
+            <li><a href="search.php">Search</a></li>
+            <li><a href="edit.php">Admin</a></li>
          </ul>
       </div>
       <div class="search">

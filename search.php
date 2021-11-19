@@ -1,13 +1,8 @@
 <?php
+$page_title = 'Search';
 include_once __DIR__ . '/_global/header.php';
 ?>
-</div>
-    <div class="search">
-        <img src="imgs/search.svg" alt="search">
-    </div>
-    <div class="logo">
-        <img src="imgs/logo.svg" alt="logo">
-    </div>
+
 </nav>
 <div class="center">
     <div class= "hero">
