@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/_global/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
 ?>
 <div class="center">
       <div class="hero">
@@ -40,5 +40,5 @@ include_once __DIR__ . '/_global/header.php';
    </div>
    </div>
 <?php
-include_once __DIR__ . '/_global/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/footer.php';
 ?>
