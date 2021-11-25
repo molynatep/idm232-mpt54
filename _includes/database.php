@@ -1,5 +1,7 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
+//Connecting to mysql with database info
 $db_connection = mysqli_connect(
     $app['db_hostname'],
     $app['db_username'],
@@ -7,8 +9,8 @@ $db_connection = mysqli_connect(
     $app['db_database_name']
 );
 
-//Check if connection has been established
-if(!$db_connection) {
+//check if connection has established
+if(!$db_connection){
     echo 'Connection Error: '.mysqli_connect_error();
     exit();
 }
