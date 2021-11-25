@@ -12,7 +12,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
       <form action="" method ="POST">
 
          <div class="inside">
-         <input class="pickimage" type="image" src="imgs/blankimage.jpg" alt= "Submit"> 
+         <input class="pickimage" type="image" src="/imgs/blankimage.jpg" alt= "Submit"> 
          <input type="file" id="myFile" name="image">
          <input type="text" value="" name="recipe_name" placeholder="Recipe Name">
          <input type="text" value="" name="time" placeholder="Time to Make">
