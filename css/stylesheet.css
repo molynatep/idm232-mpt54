@@ -161,6 +161,11 @@ html {
   display:inline-block;
 }
 
+div.container {
+  max-width: 600px;
+  margin: 0 2rem;
+}
+
  /*HAMBURGER*/
 
  #menuToggle

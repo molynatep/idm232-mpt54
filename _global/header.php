@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //Required files for the app 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';

@@ -1,6 +1,7 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
 ?>
+
 <div class="center">
       <div class="hero">
          <h1>Find your favorite recipes.</h1>

@@ -10,7 +10,7 @@
             <li><a href="/index.php">Home</a></li>
             <li><a href="/categories.php">Categories</a></li>
             <li><a href="/search.php">Search</a></li>
-            <li><a href="/login.php">Login</a></li>
+            <li><a href="/admin/recipes/all.php">Admin</a></li>
          </ul>
       </div>
       <div class="search">
