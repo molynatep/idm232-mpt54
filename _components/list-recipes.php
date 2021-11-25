@@ -1,5 +1,5 @@
-<table>
-    <thead>
+<table class="editbox">
+    <thead >
       <tr>
         <th>Recipe #</th>
         <th>Date</th>
