@@ -3,7 +3,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
 
 // Build Query
 $query = 'SELECT * ';
-$query .= 'FROM users';
+$query .= 'FROM recipes';
 $db_results = mysqli_query($db_connection, $query);
 
 ?>
@@ -16,7 +16,7 @@ $db_results = mysqli_query($db_connection, $query);
 <?php
    // Build Query
 $query = 'SELECT * ';
-$query .= 'FROM users';
+$query .= 'FROM recipes';
 $db_results = mysqli_query($db_connection, $query);
 ?>
     <?php

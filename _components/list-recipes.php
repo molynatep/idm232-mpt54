@@ -1,9 +1,9 @@
 <table>
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Role</th>
-        <th>Name</th>
+        <th>Recipe #</th>
+        <th>Date</th>
+        <th>Title</th>
       </tr>
     </thead>
     <tbody>
@@ -11,8 +11,8 @@
           while ($row = mysqli_fetch_assoc($db_results)) {
               echo '<tr>';
               echo '<td>' . $row['id'] . '</td>';
-              echo '<td>' . $row['title'] . '</td>';
-              echo '<td><a href="view.php?id=' . $row['id'] . '">' . $row['title'] . ''</a></td>';
+              echo '<td>' . $row['date_created'] . '</td>';
+              echo '<td><a href="view.php?id=' . $row['id'] . $row['date_created'] . '">'. $row['title'] . '</a></td>';
               echo '</td>';
           }
         ?>
