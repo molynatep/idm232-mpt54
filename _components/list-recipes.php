@@ -2,7 +2,8 @@
     <thead >
       <tr>
         <th>Recipe #</th>
-        <th>Date</th>
+        <th> Created </th>
+
         <th>Title</th>
       </tr>
     </thead>
@@ -12,7 +13,7 @@
               echo '<tr>';
               echo '<td>' . $row['id'] . '</td>';
               echo '<td>' . $row['date_created'] . '</td>';
-              echo '<td><a href="view.php?id=' . $row['id'] . $row['date_created'] . '">'. $row['title'] . '</a></td>';
+              echo '<td><a href="view.php?id=' . $row['id'] . '">' . $row['title'] .'</a></td>';
               echo '</td>';
           }
         ?>

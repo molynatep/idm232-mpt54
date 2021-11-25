@@ -1,4 +1,5 @@
 <?php
+$page_title = 'All Recipes';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
 
 // Build Query
