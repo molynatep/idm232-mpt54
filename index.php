@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+include '_global/header.php';
 ?>
 
 <div class="center">
@@ -26,7 +26,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
          </div>
       </div>
    <div class="grid">
-      <div class="recipehover"><a href="recipepage.html">
+      <div class="recipehover"><a href="recipepage.php">
       <img class="banana" src="imgs/bananabread.png" alt="bananabread"></a>
       </div>
       <div>
@@ -41,5 +41,5 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
    </div>
    </div>
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/footer.php';
+include '_global/footer.php';
 ?>

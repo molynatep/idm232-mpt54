@@ -1,10 +1,8 @@
 <?php
-$page_title = 'All Recipes';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+include '../../_global/header2.php';
 
 // Build Query
-$query = 'SELECT * ';
-$query .= 'FROM recipes';
+$query = "SELECT * FROM recipes";
 $db_results = mysqli_query($db_connection, $query);
 
 ?>
@@ -23,15 +21,15 @@ $db_results = mysqli_query($db_connection, $query);
     <?php
     // Check if the results returned anything
     if ($db_results && $db_results->num_rows > 0) {
-        include $_SERVER['DOCUMENT_ROOT'] . '/_components/list-recipes.php';
+        include '../../_components/list-recipes.php';
     } else {
         echo '<p>There are currently no users in the database</p>';
     }
     ?>
-   <a class="add" href="/admin/recipes/create.php">
+   <a class="add" href="create.php">
    <h2 class="add">CREATE RECIPE</h2>
    </a>
 
    <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/footer.php';
+include '../../_global/footer.php';
 ?>

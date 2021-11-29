@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+include '/config.php';
 
 //Connecting to mysql with database info
 $db_connection = mysqli_connect(

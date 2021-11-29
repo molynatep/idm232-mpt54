@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Create a Recipe';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+include '../../_global/header2.php';
 
 // Form has been submitted
 if (isset($_POST['submit'])) {
@@ -20,12 +20,12 @@ if (isset($_POST['submit'])) {
 
    // Execute Query
    $db_results = mysqli_query($db_connection, $query);
-   if ($db_results && $db_results->num_rows > 0) {
+   if ($db_results) {
        // Success
-       redirectTo('/admin/recipes/all.php');
+       redirectTo('all.php');
    } else {
        // Error
-       redirectTo('/admin/recipes/create.php?error=' . mysqli_error($db_connection));
+       redirectTo('all.php?error=' . mysqli_error($db_connection));
    }
 }
 ?>
@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
       <form action="" method ="POST">
          <div class="inside">
 
-         <input class="pickimage" type="image" src="/imgs/blankimage.jpg" alt= "Submit"> 
+         <input class="pickimage" type="image" src="../../imgs/blankimage.jpg" alt= "Submit"> 
          <input type="file" id="myFile" name="image">
          <input type="text" value="" name="title" placeholder="Recipe Name">
          <input type="text" value="" name="category" placeholder="Category">
@@ -53,5 +53,5 @@ if (isset($_POST['submit'])) {
    </div> 
 
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
+include '../../_global/footer.php';
 ?>

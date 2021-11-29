@@ -1,21 +1,20 @@
 <?php
 $page_title = 'Delete Recipe';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+include '../../_global/header2.php';
 
 if (isset($_GET['id'])) {
-    $user_id = $_GET['id'];
+    $id = $_GET['id'];
     // Build Query
     $query .= 'DELETE ';
     $query .= 'FROM recipes ';
-    $query .= 'WHERE id=' . $user_id;
+    $query .= 'WHERE id=' . $id;
     // Sanity check to make sure we're only deleting a single record.
-    $query . -'LIMIT 1';
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results) {
-        redirectTo('/admin/recipes/all.php');
+        redirectTo('all.php?success=Recipe was deleted');
     } else {
-        redirectTo('admin/recipes/view.php?id=' . $_GET['id'] . '&error=' . mysqli_error($db_connection));
+        redirectTo('view.php?id=' . $_GET['id'] . '&error=' . mysqli_error($db_connection));
     }
 } else {
     // Redirect user if no ID is passed in URL
@@ -24,5 +23,5 @@ if (isset($_GET['id'])) {
 ?>
 
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
+include '../../_global/footer.php';
 ?>

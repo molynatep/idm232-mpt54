@@ -1,12 +1,12 @@
 <?php
-$page_title = 'Edit Recipe';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+$page_title = ' Recipe';
+include_once __DIR__ . '/../../_global/header2.php';
 
 if (isset($_POST['update'])) {
     $user_id = $_POST['user_id'];
     // Make sure GET ID == post ID
-    if ($_GET['id'] != $user_id) {
-        redirectTo('/admin/recipes/edit.php?id=' . $_GET['id'] . '&error=User ID does not match current user.');
+    if ($_GET['id'] != $id) {
+        redirectTo('edit.php?id=' . $_GET['id'] . '&error=User ID does not match current user.');
     }
     //  Parse Data
     $image = mysqli_real_escape_string($db_connection, $_POST['image']);
@@ -32,30 +32,28 @@ if (isset($_POST['update'])) {
     // Execute Query
     $db_results = mysqli_query($db_connection, $query);
 
-    if ($db_results && $db_results->num_rows > 0) {
+    if ($db_results) {
         // Success
-        redirectTo('/admin/recipes/all.php?success=User Updated');
+        redirectTo('all.php?success=User Updated');
     } else {
         // Error
-        redirectTo('/admin/recipes/edit.php?id=' . $user_id . '&error=' . mysqli_error($db_connection));
+        redirectTo('all.php?id=' . $user_id . '&error=' . mysqli_error($db_connection));
     }
 } elseif (isset($_GET['id'])) {
     $user_id = $_GET['id'];
     // Build Query
-    $query .= 'SELECT * ';
-    $query .= 'FROM recipes ';
-    $query .= 'WHERE id=' . $user_id;
+    $query = "SELECT * FROM recipes WHERE id=" . $user_id;
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results) {
         $user = $row = mysqli_fetch_assoc($db_results);
     } else {
         // Redirect user if ID does not have a match in the DB
-        redirectTo('/admin/recipes/all.php?error=' . mysqli_error($db_connection));
+        redirectTo('all.php?error=' . mysqli_error($db_connection));
     }
 } else {
     // Redirect user if no ID is passed in URL
-    redirectTo('/admin/recipes/all.php');
+    redirectTo('all.php');
 }
 ?>
    <div class="viewall">
@@ -64,11 +62,11 @@ if (isset($_POST['update'])) {
       <h1>Update Recipe</h1>
       </div>
 
-      <?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/alert.php'; ?>
+      <?php include '../../_components/alert.php'; ?>
       <form action="" method ="POST">
          <div class="inside">
 
-         <input class="pickimage" type="image" src="/imgs/blankimage.jpg" alt= "Submit"> 
+         <input class="pickimage" type="image" src="../../imgs/blankimage.jpg" alt= "Submit"> 
          <input type="file" id="myFile" name="image">
 
          <input type="text" 
@@ -104,5 +102,5 @@ if (isset($_POST['update'])) {
   </form>
 </div>
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
+include '../../_global/footer.php';
 ?>

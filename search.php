@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Search';
-include_once __DIR__ . '/_global/header.php';
+include '_global/header.php';
 ?>
 
 </nav>
@@ -45,5 +45,5 @@ include_once __DIR__ . '/_global/header.php';
 </div>
 <h2 class="view">VIEW ALL</h2>
 <?php
-include_once __DIR__ . '/_global/footer.php';
+include '_global/footer.php';
 ?>

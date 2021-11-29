@@ -1,14 +1,12 @@
 <?php
 $page_title = 'Edit Recipe';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+include_once __DIR__ . '/../../_global/header2.php';
 
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
 
     // Build Query
-    $query .= 'SELECT * ';
-    $query .= 'FROM recipes ';
-    $query .= 'WHERE id=' . $user_id;
+    $query = "SELECT * FROM recipes WHERE id=" . $user_id;
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results && $db_results->num_rows > 0) {
@@ -40,11 +38,11 @@ if (isset($_GET['id'])) {
     <p><b>Last Updated:</b> <?php echo $user['date_updated']; ?>
     </p>
     <p><a class="btn btn-primary"
-            href="/admin/recipes/edit.php?id=<?php echo $user['id']; ?>">Edit</a>
+            href="edit.php?id=<?php echo $user['id']; ?>">Edit</a>
         <a class="btn btn-secondary"
-            href="/admin/recipes/delete.php?id=<?php echo $user['id']; ?>">Delete</a>
+            href="delete.php?id=<?php echo $user['id']; ?>">Delete</a>
     </p>
 </div>
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
+include_once __DIR__ . '/../../_global/footer.php';
 ?>

@@ -1,38 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Banana Bread</title>
-   <link rel="normalize" href="css/normalize.css">
-   <link rel="stylesheet" href="css/stylesheet.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-   <nav>
-      <div id="menuToggle">
-         <input type="checkbox" />
-         <span></span>
-         <span></span>
-         <span></span>
-         <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li><a href="edit.html">Admin</a></li>
-         </ul>
-      </div>
-      <div class="search">
-         <img src="imgs/search.svg" alt="search">
-      </div>
-      <div class="logo">
-         <img src="imgs/logo.svg" alt="logo">
-      </div>
-   </nav>
-   <div class="recipegrid">
+<?php
+$page_title = 'Banana Bread';
+include '_global/header.php';
+?>
+
+<div class="recipegrid">
          <div class="leftrecipe">
          <div class="ingredients">
          <h1>Ingredients</h1>
@@ -80,5 +51,6 @@
       </div>
       </div>
    </div>
-</body>
-</html>
+   <?php
+include '_global/footer.php';
+?>

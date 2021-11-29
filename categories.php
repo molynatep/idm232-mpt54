@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Categories';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+include '_global/header.php';
 ?>
 
 <div class="center">
@@ -32,5 +32,5 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
 </header>
 
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
+include '_global/footer.php';
 ?>
