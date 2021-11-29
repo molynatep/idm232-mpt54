@@ -23,7 +23,7 @@ $db_results = mysqli_query($db_connection, $query);
     if ($db_results && $db_results->num_rows > 0) {
         include '../../_components/list-recipes.php';
     } else {
-        echo '<p>There are currently no users in the database</p>';
+        echo '<p>There are currently no recipes in the database</p>';
     }
     ?>
    <a class="add" href="create.php">

@@ -1,13 +1,8 @@
 <?php
 $page_title = ' Recipe';
-include_once __DIR__ . '/../../_global/header2.php';
+include '../../_global/header2.php';
 
 if (isset($_POST['update'])) {
-    $user_id = $_POST['user_id'];
-    // Make sure GET ID == post ID
-    if ($_GET['id'] != $id) {
-        redirectTo('edit.php?id=' . $_GET['id'] . '&error=User ID does not match current user.');
-    }
     //  Parse Data
     $image = mysqli_real_escape_string($db_connection, $_POST['image']);
     $title = mysqli_real_escape_string($db_connection, $_POST['title']);
@@ -37,7 +32,7 @@ if (isset($_POST['update'])) {
         redirectTo('all.php?success=User Updated');
     } else {
         // Error
-        redirectTo('all.php?id=' . $user_id . '&error=' . mysqli_error($db_connection));
+        redirectTo('all.php?id=&error=' . mysqli_error($db_connection));
     }
 } elseif (isset($_GET['id'])) {
     $user_id = $_GET['id'];
@@ -88,10 +83,6 @@ if (isset($_POST['update'])) {
          <input type="text"
          value="<?php echo $user['steps'];?>"
          name="steps">
-
-         <input type="hidden"
-         value="<?php echo $user['id']; ?>"
-         name="user_id">
 
          <input class="button" name="update" type="submit" value="Update">
          </div>

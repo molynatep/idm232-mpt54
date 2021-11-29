@@ -22,13 +22,14 @@ if (isset($_POST['submit'])) {
    $db_results = mysqli_query($db_connection, $query);
    if ($db_results) {
        // Success
-       redirectTo('all.php');
+       redirectTo('all.php?success=RecipewasCreated');
    } else {
        // Error
        redirectTo('all.php?error=' . mysqli_error($db_connection));
    }
 }
 ?>
+
 
 
    <div class="viewall">
