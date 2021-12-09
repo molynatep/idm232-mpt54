@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Banana Bread';
-include '_global/header.php';
+include_once __DIR__ . '/_global/header.php';
 ?>
 
 <div class="recipegrid">
@@ -52,5 +52,5 @@ include '_global/header.php';
       </div>
    </div>
    <?php
-include '_global/footer.php';
+include_once __DIR__ . '/_global/footer.php';
 ?>

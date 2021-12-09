@@ -1,6 +1,6 @@
 <?php
 $page_title = ' Recipe';
-include '../../_global/header2.php';
+include_once __DIR__ . '/../../_global/header2.php';
 
 if (isset($_POST['update'])) {
     //  Parse Data
@@ -21,34 +21,33 @@ if (isset($_POST['update'])) {
     $query .= "ingredients = '{$ingredients}', ";
     $query .= "steps = '{$steps}', ";
     $query .= "date_updated = '{$current_date}' ";
-    $query .= "WHERE id = {$user_id}";
-
+    $query .= "WHERE id = {$_POST['recipe_id']}";
 
     // Execute Query
     $db_results = mysqli_query($db_connection, $query);
 
     if ($db_results) {
         // Success
-        redirectTo('all.php?success=User Updated');
+        redirectTo('/all.php?success=User Updated');
     } else {
         // Error
-        redirectTo('all.php?id=&error=' . mysqli_error($db_connection));
+        redirectTo('/all.php?id=&error=' . mysqli_error($db_connection));
     }
 } elseif (isset($_GET['id'])) {
-    $user_id = $_GET['id'];
+    $recipe_id = $_GET['id'];
     // Build Query
-    $query = "SELECT * FROM recipes WHERE id=" . $user_id;
+    $query = "SELECT * FROM recipes WHERE id=" . $recipe_id;
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results) {
         $user = $row = mysqli_fetch_assoc($db_results);
     } else {
         // Redirect user if ID does not have a match in the DB
-        redirectTo('all.php?error=' . mysqli_error($db_connection));
+        redirectTo('/all.php?error=' . mysqli_error($db_connection));
     }
 } else {
     // Redirect user if no ID is passed in URL
-    redirectTo('all.php');
+    redirectTo('/all.php');
 }
 ?>
    <div class="viewall">
@@ -76,15 +75,18 @@ if (isset($_POST['update'])) {
          value="<?php echo $user['make_time'];?>"
          name="make_time">
 
-         <input type="text" 
-         value="<?php echo $user['ingredients'];?>"
-         name= "ingredients">
+         <textarea class="mytextarea" 
+         name="ingredients">
+         <?php echo $user['ingredients'];?>
+        </textarea>
 
-         <input type="text"
-         value="<?php echo $user['steps'];?>"
+         <textarea class="mytextarea" 
          name="steps">
+         <?php echo $user['steps'];?>
+        </textarea>
 
          <input class="button" name="update" type="submit" value="Update">
+         <input name="recipe_id" type="hidden" value="<?php echo $recipe_id; ?>">
          </div>
       </form>
       </div>
@@ -93,5 +95,5 @@ if (isset($_POST['update'])) {
   </form>
 </div>
 <?php
-include '../../_global/footer.php';
+include_once __DIR__ . '/../../_global/footer.php';
 ?>

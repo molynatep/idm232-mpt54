@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Categories';
-include '_global/header.php';
+include_once __DIR__ .  '/_global/header.php';
 ?>
 
 <div class="center">
@@ -32,5 +32,5 @@ include '_global/header.php';
 </header>
 
 <?php
-include '_global/footer.php';
+include_once __DIR__ . '/_global/footer.php';
 ?>

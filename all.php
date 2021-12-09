@@ -1,5 +1,8 @@
 <?php
 include_once __DIR__ . '/_global/header.php';
+// Build Query
+$query = "SELECT * FROM recipes";
+$db_results = mysqli_query($db_connection, $query);
 ?>
 
 <div class="center">

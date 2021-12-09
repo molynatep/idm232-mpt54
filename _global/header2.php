@@ -1,10 +1,6 @@
 <?php
-
-//Required files for the app 
-
-
-include '../../config.php';
-include '../../_includes/helper.php';
+include __DIR__ . '/../config.php';
+include __DIR__ . '/../_includes/helper.php';
 
 if (isset($page_title)) {
     $page_title = $page_title . '';
@@ -12,7 +8,6 @@ if (isset($page_title)) {
     $page_title = 'Happy Recipes';
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +21,8 @@ if (isset($page_title)) {
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+   <script src="https://cdn.tiny.cloud/1/kvdkek42hkw26y70gwfyu1wjjs4kbptyur2oqm8fwgyrgepo/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 </head>
 <body>
 

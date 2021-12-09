@@ -1,13 +1,8 @@
 <?php
-/**
- * Output the full site url dynamically instead of statically
- *
- * @param string $path
- * @return string
- */
 function siteUrl($path = '')
 {
-    $url = 'http://' . $_SERVER['SERVER_NAME'] ;
+    global $app;
+    $url =  $app['url'];
     echo $url . $path;
 }
 
@@ -19,8 +14,11 @@ function siteUrl($path = '')
  */
 function redirectTo($path)
 {
-    header('Location: ' . $path);
+    global $app;
+    $url =  $app['url'];
+    header('Location: ' . $url . $path);
 }
+
 
 /**
  * return date and time in the correct
@@ -35,19 +33,4 @@ function getFormattedDateTime()
 
 
 
-/**
- * determine if current page is an admin page
- *
- * @return boolean
- */
-function isAdminPage()
-{
-    // Getting Slug
-    $uri = $_SERVER['REQUEST_URI'];
-    $string_to_check_for = '/admin';
-    if (strpos($uri, $string_to_check_for) === false) {
-        return false;
-    } else {
-        return true;
-    }
-}
+

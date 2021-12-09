@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Delete Recipe';
-include '../../_global/header2.php';
+include_once __DIR__ . '/../../_global/header2.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -9,11 +9,11 @@ if (isset($_GET['id'])) {
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results) {
-        redirectTo('all.php?success=RecipewasDeleted');
+        redirectTo('/admin/recipes/all.php?success=RecipewasDeleted');
     } else {
-        redirectTo('view.php?&error=' . mysqli_error($db_connection));
+        redirectTo('/admin/recipes/view.php?&error=' . mysqli_error($db_connection));
     }
 }
 
-include '../../_global/footer.php';
+include_once __DIR__ . '/../../_global/footer.php';
 ?>

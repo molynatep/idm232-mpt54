@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Create a Recipe';
-include '../../_global/header2.php';
+include_once __DIR__ . '/../../_global/header2.php';
 
 // Form has been submitted
 if (isset($_POST['submit'])) {
@@ -22,10 +22,10 @@ if (isset($_POST['submit'])) {
    $db_results = mysqli_query($db_connection, $query);
    if ($db_results) {
        // Success
-       redirectTo('all.php?success=RecipewasCreated');
+       redirectTo('/admin/recipes/all.php?success=RecipewasCreated');
    } else {
        // Error
-       redirectTo('all.php?error=' . mysqli_error($db_connection));
+       redirectTo('/admin/recipes//all.php?error=' . mysqli_error($db_connection));
    }
 }
 ?>
@@ -37,22 +37,23 @@ if (isset($_POST['submit'])) {
       <div class="recipes">
       <h1>Create a New Recipe</h1>
       </div>
-      <form action="" method ="POST">
+      <form action="" method ="POST" enctype="multipart/form-data">
          <div class="inside">
 
          <input class="pickimage" type="image" src="../../imgs/blankimage.jpg" alt= "Submit"> 
-         <input type="file" id="myFile" name="image">
+         <input type="file" id="myFile" value="" name="image">
          <input type="text" value="" name="title" placeholder="Recipe Name">
          <input type="text" value="" name="category" placeholder="Category">
          <input type="text" value="" name="make_time" placeholder="Time to Make">
-         <input type="text" value="" name= "ingredients" placeholder="Ingredients">
-         <input type="text" value="" name="steps" placeholder="Steps">
+         <textarea class="mytextarea" value="" name="ingredients" placeholder="List ingredients here."></textarea>
+         <textarea class="mytextarea" value="" name="steps" placeholder="Type recipe steps here."></textarea>
          <input class="button" name="submit" type="submit" value="Submit">
+
          </div>
       </form>
       </div>
    </div> 
 
 <?php
-include '../../_global/footer.php';
+include_once __DIR__ . '/../../_global/footer.php';
 ?>

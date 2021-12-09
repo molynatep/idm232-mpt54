@@ -1,5 +1,5 @@
 <?php
-include '../../_global/header2.php';
+include_once __DIR__ . '/../../_global/header2.php';
 
 // Build Query
 $query = "SELECT * FROM recipes";
@@ -31,5 +31,5 @@ $db_results = mysqli_query($db_connection, $query);
    </a>
 
    <?php
-include '../../_global/footer.php';
+include_once __DIR__ . '/../../_global/footer.php';
 ?>

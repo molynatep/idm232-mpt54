@@ -2,8 +2,8 @@
 
 //Required files for the app 
 
-include 'config.php';
-include '_includes/helper.php';
+include __DIR__ . '/../config.php';
+include __DIR__ . '/../_includes/helper.php';
 
 if (isset($page_title)) {
     $page_title = $page_title . '';
