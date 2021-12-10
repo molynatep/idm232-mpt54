@@ -4,6 +4,8 @@
 
 include __DIR__ . '/../config.php';
 include __DIR__ . '/../_includes/helper.php';
+include __DIR__ . '/../_includes/functions.php';
+
 
 if (isset($page_title)) {
     $page_title = $page_title . '';

@@ -1,5 +1,14 @@
 <?php
 include_once __DIR__ . '/_global/header.php';
+
+// If Keyword param exist, update query to show search results instead of everything
+if (isset($_GET['keyword'])) {
+   $keyword = $_GET['keyword'];
+   $recipes = search_recipe_with_keyword($keyword);
+} else {
+   // Build Query
+   $recipes = get_recipes();
+}
 ?>
 
 <div class="center">
@@ -26,19 +35,14 @@ include_once __DIR__ . '/_global/header.php';
          </div>
       </div>
    <div class="grid">
-      <div class="recipehover"><a href="recipepage.php">
-      <img class="banana" src="imgs/bananabread.png" alt="bananabread"></a>
-      </div>
-      <div>
-      <img src="imgs/chicken.png" alt="chicken">
-      </div>
-      <div>
-      <img src="imgs/chicken.png" alt="chicken">
-      </div>
-      <div>
-      <img src="imgs/chicken.png" alt="chicken">
-      </div>
-   </div>
+   <?php
+    // Check if the results returned anything
+    if ($recipes) {
+        include __DIR__ . '/_components/list-recipes2.php';
+    } else {
+        echo '<p>There are currently no recipes in the database</p>';
+    }
+    ?>
    </div>
 <?php
 include_once __DIR__ .  '/_global/footer.php';

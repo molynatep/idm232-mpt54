@@ -8,6 +8,5 @@
       tinycomments_author: 'Author name',
       });
     </script>
-
 </body>
 </html>

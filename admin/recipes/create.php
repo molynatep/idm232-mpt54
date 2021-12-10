@@ -14,6 +14,7 @@ if (isset($_POST['submit'])) {
    $current_date = getFormattedDateTime();
 
 
+
    // Build Query
    $query = 'INSERT INTO recipes(image, title, category, make_time, ingredients, steps, date_created, date_updated)';
    $query .= "VALUES ('{$image}', '{$title}', '{$category}','{$make_time}', '{$ingredients}', '{$steps}', '{$current_date}', '{$current_date}')";
@@ -43,7 +44,16 @@ if (isset($_POST['submit'])) {
          <input class="pickimage" type="image" src="../../imgs/blankimage.jpg" alt= "Submit"> 
          <input type="file" id="myFile" value="" name="image">
          <input type="text" value="" name="title" placeholder="Recipe Name">
-         <input type="text" value="" name="category" placeholder="Category">
+         <label for="">Category</label>
+         <br>
+    <select name="category" id="">
+      <option selected value="breakfast">Breakfast</option>
+      <option value="lunch">Lunch</option>
+      <option value="dinner">Dinner</option>
+      <option value="appetizer">Appetizer</option>
+      <option value="dessert">Dessert</option>
+      <option value="vegetarian">Vegetarian</option>
+    </select>
          <input type="text" value="" name="make_time" placeholder="Time to Make">
          <textarea class="mytextarea" value="" name="ingredients" placeholder="List ingredients here."></textarea>
          <textarea class="mytextarea" value="" name="steps" placeholder="Type recipe steps here."></textarea>
