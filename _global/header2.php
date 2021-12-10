@@ -41,7 +41,7 @@ if (isset($page_title)) {
          </ul>
       </div>
       <div class="search">
-         <img src="../../imgs/search.svg" alt="search">
+      <a href="../../search.php"><img src="../../imgs/search.svg" alt="search"></a>
       </div>
       <div class="logo">
          <img src="../../imgs/logo.svg" alt="logo">

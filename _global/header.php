@@ -41,11 +41,10 @@ if (isset($page_title)) {
             <li><a href="index.php">Home</a></li>
             <li><a href="categories.php">Categories</a></li>
             <li><a href="search.php">Search</a></li>
-            <li><a href="admin/recipes/all.php">Admin</a></li>
          </ul>
       </div>
       <div class="search">
-         <img src="imgs/search.svg" alt="search">
+      <a href="search.php"><img src="imgs/search.svg" alt="search"></a>
       </div>
       <div class="logo">
          <img src="imgs/logo.svg" alt="logo">
