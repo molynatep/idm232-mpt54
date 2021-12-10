@@ -10,23 +10,25 @@ include_once __DIR__ .  '/_global/header.php';
    </div>
    </div>
       <div class="grid2">
-         <div>
-         <img src="imgs/breakfast.png" alt="chicken">
+         <div>         
+         <a href="breakfast.php">
+         <img src="imgs/breakfast.png" alt="chicken"></a>
          </div>
          <div>
-         <img src="imgs/lunch.png" alt="chicken">
+         <a href="lunch.php">
+         <img src="imgs/lunch.png" alt="chicken"></a>
          </div>
          <div>
-         <img src="imgs/dinner.png" alt="chicken">
+         <a href="dinner.php">
+         <img src="imgs/dinner.png" alt="chicken"></a>
          </div>
          <div>
-         <img src="imgs/appetizers.png" alt="chicken">
+         <a href="appetizers.php">
+         <img src="imgs/appetizers.png" alt="chicken"></a>
          </div>
          <div>
-            <img src="imgs/dessert.png" alt="chicken">
-         </div>
-         <div>
-            <img src="imgs/vegetarian.png" alt="chicken">
+         <a href="dessert.php">
+            <img src="imgs/dessert.png" alt="chicken"></a>
          </div>
          </div>
 </header>

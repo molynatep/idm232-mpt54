@@ -52,7 +52,6 @@ if (isset($_POST['submit'])) {
       <option value="dinner">Dinner</option>
       <option value="appetizer">Appetizer</option>
       <option value="dessert">Dessert</option>
-      <option value="vegetarian">Vegetarian</option>
     </select>
          <input type="text" value="" name="make_time" placeholder="Time to Make">
          <textarea class="mytextarea" value="" name="ingredients" placeholder="List ingredients here."></textarea>

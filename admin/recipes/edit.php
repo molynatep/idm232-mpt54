@@ -67,9 +67,14 @@ if (isset($_POST['update'])) {
          value="<?php echo $user['title'];?>""
          name="title" >
 
-         <input type="text" 
-         value="<?php echo $user['category'];?>" 
-         name="category">
+         <select name="category" id="">
+      <option selected value=<?php echo $user['category'];?>><?php echo $user['category'];?></option>
+      <option value="breakfast">Breakfast</option>
+      <option value="lunch">Lunch</option>
+      <option value="dinner">Dinner</option>
+      <option value="appetizer">Appetizer</option>
+      <option value="dessert">Dessert</option>
+    </select>
 
          <input type="text"
          value="<?php echo $user['make_time'];?>"

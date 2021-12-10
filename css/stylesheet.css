@@ -126,7 +126,7 @@ html {
    padding: 0 10rem 0;
    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
  }
- div.grid2>div>img {
+ div.grid2>div>a>img {
    width:120px;
  }
 
@@ -472,7 +472,7 @@ div.recipetime>h2 {
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
  }
- .grid2>div>img {
+  .grid2>div>a>img {
    width:120px;
  }
    .grid2 {
@@ -492,7 +492,7 @@ div.recipetime>h2 {
  height: 2px;
  margin-bottom: 5px;
 }
-div.grid2>div>img {
+div.grid2>div>a>img {
   width:100px;
 }
 .grid2 {
@@ -532,7 +532,7 @@ div.grid2>div>img {
    .grid {
      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    }
-   .grid2>div>img {
+   .grid2>div>a>img {
      width:100px;
    }
    .center {
