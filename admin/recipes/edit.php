@@ -4,7 +4,6 @@ include_once __DIR__ . '/../../_global/header2.php';
 
 if (isset($_POST['update'])) {
     //  Parse Data
-    $image = mysqli_real_escape_string($db_connection, $_POST['image']);
     $title = mysqli_real_escape_string($db_connection, $_POST['title']);
     $category = mysqli_real_escape_string($db_connection, $_POST['category']);
     $make_time = mysqli_real_escape_string($db_connection, $_POST['make_time']);
@@ -28,10 +27,10 @@ if (isset($_POST['update'])) {
 
     if ($db_results) {
         // Success
-        redirectTo('/all.php?success=User Updated');
+        redirectTo('admin/recipes/all.php?success=Recipe Updated');
     } else {
         // Error
-        redirectTo('/all.php?id=&error=' . mysqli_error($db_connection));
+        redirectTo('admin/recipes/all.php?id=&error=' . mysqli_error($db_connection));
     }
 } elseif (isset($_GET['id'])) {
     $recipe_id = $_GET['id'];
@@ -69,11 +68,11 @@ if (isset($_POST['update'])) {
 
          <select name="category" id="">
       <option selected value=<?php echo $user['category'];?>><?php echo $user['category'];?></option>
-      <option value="breakfast">Breakfast</option>
-      <option value="lunch">Lunch</option>
-      <option value="dinner">Dinner</option>
-      <option value="appetizer">Appetizer</option>
-      <option value="dessert">Dessert</option>
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+      <option value="Appetizer">Appetizer</option>
+      <option value="Dessert">Dessert</option>
     </select>
 
          <input type="text"
