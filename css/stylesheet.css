@@ -423,7 +423,51 @@ div.leftrecipe>img {
  padding-top:12rem;
 }
 
+/*casestudy*/
+.centerpls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 253, 249);
+}
+.casestudy {
+  max-width: 650px;
+  margin: 2rem;
+}
+.casestudy>img {
+  width: 100%;
+  border-radius: 10px;
+}
 
+.casestudy>h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: -2rem;
+}
+
+.casestudy>h2 {
+  font-weight: bold;
+  font-size:1.5rem;
+  margin: 1rem 0 .2rem;
+}
+
+.casestudy>p {
+  margin-top: 0;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.casestudy>h3 {
+  margin-top: 0;
+  margin-bottom: .2rem;
+}
+.casegrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+}
+.casegrid>img {
+  width: 95%;
+}
 
 
 @media screen and (max-width: 1300px) {
